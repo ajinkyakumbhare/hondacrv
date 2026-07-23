@@ -1,0 +1,29 @@
+{
+    "name": "hondlwcapp",
+    "version": "0.0.1",
+    "license": "MIT",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "clean": "rimraf node_modules .lwr_cache site",
+        "dev": "lwr dev",
+        "dev:compat": "lwr dev --mode compat",
+        "build": "lwr build --clean",
+        "build:prod-compat": "lwr build --clean --mode prod-compat",
+        "start": "lwr start",
+        "stage": "yarn build && yarn start",
+        "stage:prod-compat": "yarn build:prod-compat && yarn start",
+        "copyslds": "node ./scripts/copy-slds.mjs"
+    },
+    "dependencies": {
+        "@salesforce-ux/design-system": "^2.264.0",
+        "lwc": "9.3.4",
+        "lwr": "0.23.12"
+    },
+    "engines": {
+        "node": ">=22.0.0"
+    },
+    "volta": {
+        "node": "24.13.1"
+    }
+}
